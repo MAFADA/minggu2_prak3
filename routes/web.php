@@ -20,20 +20,20 @@ use App\Http\Controllers\CommentController;
 
 Route::get('/', [HomeController::class,'home']);
 
-Route::prefix('prodi')->group(function() {
-    Route::get('/manajemen-informatika',[ProdiController::class,'mi']);
-    Route::get('/teknik-informatika',[ProdiController::class,'ti']);
-});
+// Route::prefix('prodi')->group(function() {
+//     Route::get('/manajemen-informatika',[ProdiController::class,'mi']);
+//     Route::get('/teknik-informatika',[ProdiController::class,'ti']);
+// });
 
-Route::get('/news/{$id}', [NewsController::class,'news']);
+Route::get('/news/{id}', [NewsController::class,'news']);
 
-Route::prefix('sarana')->group(function() {
-    Route::get('/perkantoran',[SaranaController::class,'kantor']);
-    Route::get('/laboratorium',[SaranaController::class,'lab']);
-    Route::get('/kelas',[SaranaController::class,'kelas']);
-    Route::get('/lainnya',[SaranaController::class,'lain']);
-});
+// Route::prefix('sarana')->group(function() {
+//     Route::get('/perkantoran',[SaranaController::class,'kantor']);
+//     Route::get('/laboratorium',[SaranaController::class,'lab']);
+//     Route::get('/kelas',[SaranaController::class,'kelas']);
+//     Route::get('/lainnya',[SaranaController::class,'lain']);
+// });
 
 Route::get('/about', [AboutController::class,'about']);
 
-Route::get('/comment/{$name}/{$pesan}', [CommentController::class,'comment']);
+Route::get('/comment/{name}/{pesan}', [CommentController::class,'comment']);
